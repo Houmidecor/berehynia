@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Берегиня — Houmi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Колекція свічок «Берегиня» від Houmi: шість берегинь ручної роботи, кожна зі своїм значенням.">
+<link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<meta property="og:title" content="Berehynia — Houmi">
+<meta property="og:description" content="Колекція свічок «Берегиня» від Houmi · Kolekcja świec „Berehynia” · The Berehynia candle collection by Houmi">
+<meta property="og:image" content="assets/products/home.jpg">
+<meta property="og:type" content="website">
+<style>
+/* Layout: editorial split hero with a single line illustration, then a quiet three-column catalogue; one product dialog with photo and full text. */
+@font-face{font-family:"Inter";font-style:normal;font-display:swap;font-weight:100 900;src:url("assets/fonts/inter-cyrillic-wght-normal.woff2") format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Inter";font-style:normal;font-display:swap;font-weight:100 900;src:url("assets/fonts/inter-latin-ext-wght-normal.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Inter";font-style:normal;font-display:swap;font-weight:100 900;src:url("assets/fonts/inter-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  /* Houmi brand palette (Brand Guide p.7) */
+  --ivory:#F3EFE6;      /* page ground */
+  --paper:#FAF8F3;      /* raised surface (ivory tint) */
+  --sand:#E7DED0;       /* photo tiles, sits between ivory and #C4B29A */
+  --line:#C4B29A;       /* hairlines */
+  --olive:#79795B;      /* brand accent: rules, focus */
+  --earth:#5B4C39;      /* dark brown: small labels, buttons, logo */
+  --ink:#353535;        /* body text */
+  --ink-soft:#4E4A43;   /* secondary text, 8.6:1 on ivory */
+  --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --step-label:.75rem;
+  --step-body:1.0625rem;
+  --step-lead:clamp(1.125rem,1rem + .5vw,1.3125rem);
+  --step-name:1.3125rem;
+  --step-h2:clamp(1.75rem,1.3rem + 2vw,2.625rem);
+  --step-h1:clamp(2.75rem,1.6rem + 5.4vw,5.75rem);
+  --wrap:1180px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--font);font-size:var(--step-body);line-height:1.6;font-feature-settings:"cv11","ss01";-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--ivory)}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--olive);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;z-index:50;background:var(--earth);color:var(--ivory);padding:10px 16px;text-decoration:none}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 8px)}
+.label{font-size:var(--step-label);font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--earth)}
+
+/* Draft notice for the founders: disappears automatically when all content is filled in */
+.draft{background:var(--earth);color:var(--ivory);font-size:.875rem;line-height:1.5}
+.draft .wrap{padding-block:10px;display:flex;gap:.5rem 1rem;flex-wrap:wrap;align-items:baseline}
+.draft strong{font-weight:600}
+
+/* Header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--ivory) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .3s}
+.site-head.scrolled{border-bottom-color:color-mix(in srgb,var(--line) 70%,transparent)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.brand{display:flex;align-items:center;color:var(--earth);text-decoration:none;padding:6px 0}
+.brand svg{height:26px;width:calc(26px * 890 / 252);display:block}
+.nav{display:flex;gap:28px}
+.nav a{font-size:.875rem;letter-spacing:.06em;text-decoration:none;color:var(--ink-soft);padding:10px 0;border-bottom:1px solid transparent}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--olive)}
+.lang{display:flex;border:1px solid var(--line)}
+.lang button{appearance:none;background:none;border:0;min-width:44px;min-height:40px;padding:0 10px;font-size:.8125rem;font-weight:500;letter-spacing:.1em;color:var(--ink-soft);cursor:pointer}
+.lang button + button{border-left:1px solid var(--line)}
+.lang button[aria-pressed="true"]{background:var(--earth);color:var(--ivory)}
+.lang button:not([aria-pressed="true"]):hover{background:var(--paper);color:var(--ink)}
+@media (max-width:760px){.nav{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,6vw,88px);align-items:center;padding-block:clamp(40px,7vw,96px) clamp(56px,8vw,112px)}
+.hero-text{min-width:0;display:grid;gap:22px;position:relative;z-index:1}
+.hero h1{margin:0;font-weight:300;font-size:var(--step-h1);line-height:.98;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance;color:var(--ink)}
+.hero h1 .sub{display:block;font-size:var(--step-label);font-weight:500;letter-spacing:.14em;color:var(--earth);margin-bottom:22px;line-height:1.4}
+.lead{margin:0;font-size:var(--step-lead);line-height:1.55;max-width:34em;color:var(--ink)}
+.lead + .lead{color:var(--ink-soft);font-size:var(--step-body)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:1px solid var(--earth);background:var(--earth);color:var(--ivory);text-decoration:none;font-size:.9375rem;letter-spacing:.04em;cursor:pointer;transition:background .25s,color .25s}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--earth)}
+.btn.ghost:hover{background:var(--earth);color:var(--ivory)}
+.btn svg{width:16px;height:16px;flex:none}
+.hero-figure{margin:0;min-width:0;display:flex;justify-content:center;align-items:center}
+.hero-figure img{width:min(100%,500px);height:auto}
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-figure{order:-1}
+  .hero-figure img{width:min(78%,340px)}
+}
+
+/* Catalogue */
+.catalogue{padding-block:clamp(56px,8vw,104px);border-top:1px solid color-mix(in srgb,var(--line) 60%,transparent);background:var(--paper)}
+.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 48px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.section-head h2{margin:0;font-weight:300;font-size:var(--step-h2);line-height:1.1;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance}
+.section-head p{margin:0;color:var(--ink-soft);max-width:30em;justify-self:end}
+@media (max-width:760px){.section-head{grid-template-columns:1fr}.section-head p{justify-self:start}}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(40px,5vw,64px) clamp(20px,3vw,40px)}
+@media (max-width:960px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.grid{grid-template-columns:1fr;gap:48px}}
+.product{display:flex;flex-direction:column;gap:16px;min-width:0}
+.product .media{position:relative;overflow:hidden;background:var(--sand);aspect-ratio:4/5;cursor:pointer}
+.product .media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.product:hover .media img{transform:scale(1.035)}
+.product .body{display:flex;flex-direction:column;gap:10px;flex:1}
+.product h3{margin:0;font-size:var(--step-name);font-weight:400;line-height:1.3;letter-spacing:-.005em;text-wrap:balance}
+.symbols{margin:0;font-size:.75rem;font-weight:500;letter-spacing:.1em;line-height:1.7;color:var(--earth);text-wrap:balance}
+.pending{font-style:italic;color:var(--ink-soft)}
+.view{align-self:flex-start;margin-top:auto;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0;background:none;border:0;border-bottom:1px solid var(--olive);font-size:.9375rem;letter-spacing:.03em;color:var(--earth);cursor:pointer}
+.view svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.view:hover svg,.product:hover .view svg{transform:translateX(4px)}
+
+/* Footer */
+.site-foot{background:var(--ivory);border-top:1px solid color-mix(in srgb,var(--line) 60%,transparent)}
+.site-foot .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px 48px;padding-block:clamp(48px,6vw,80px) 32px}
+.site-foot .brand svg{height:40px;width:calc(40px * 890 / 252)}
+.statement{margin:16px 0 0;max-width:26em;font-size:var(--step-lead);font-weight:300;line-height:1.45}
+.links{display:grid;gap:4px;align-content:start;justify-self:end;min-width:220px}
+.links a{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:48px;text-decoration:none;border-bottom:1px solid var(--line);font-size:1rem}
+.links a span:last-child{color:var(--ink-soft);font-size:.875rem}
+.links a:hover{border-bottom-color:var(--olive)}
+.legal{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-top:24px;border-top:1px solid color-mix(in srgb,var(--line) 50%,transparent);font-size:.8125rem;color:var(--ink-soft)}
+@media (max-width:700px){.site-foot .wrap{grid-template-columns:1fr}.links{justify-self:stretch;min-width:0}}
+
+/* Product dialog */
+dialog.viewer{padding:0;border:0;margin:auto;width:min(1120px,calc(100vw - 48px));max-width:none;height:min(780px,calc(100dvh - 48px));max-height:none;background:var(--paper);color:var(--ink);overflow:hidden}
+dialog.viewer::backdrop{background:rgba(53,53,53,.62)}
+.viewer-inner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);height:100%}
+.stage{position:relative;background:var(--sand);display:flex;flex-direction:column;min-height:0}
+.stage-media{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:0}
+.stage-media img{width:100%;height:100%;object-fit:cover}
+.panel{display:flex;flex-direction:column;min-height:0}
+.panel-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 14px 0 clamp(20px,3vw,40px)}
+.count{font-size:.8125rem;letter-spacing:.12em;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.icon-btn{appearance:none;width:44px;height:44px;display:grid;place-items:center;background:none;border:1px solid transparent;cursor:pointer;color:var(--ink)}
+.icon-btn:hover{border-color:var(--line)}
+.icon-btn svg{width:20px;height:20px}
+.panel-body{flex:1;overflow:auto;padding:12px clamp(20px,3vw,40px) 24px;display:grid;align-content:start;gap:18px;overscroll-behavior:contain}
+.panel-body h2{margin:0;font-weight:300;font-size:clamp(1.75rem,1.4rem + 1.4vw,2.5rem);line-height:1.12;letter-spacing:-.01em;text-wrap:balance}
+.full{display:grid;gap:14px;max-width:36em}
+.full p{margin:0}
+.panel-body .symbols{margin-top:-6px}
+.wish{margin:6px 0 4px;padding:4px 0 4px 18px;border-left:2px solid var(--olive);max-width:36em;display:grid;gap:6px}
+.wish figcaption{font-size:var(--step-label);font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--earth)}
+.wish blockquote{margin:0;font-size:1.125rem;line-height:1.55;font-style:italic;color:var(--ink)}
+.panel-actions{display:flex;flex-wrap:wrap;gap:10px;padding-top:4px}
+.panel-nav{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.panel-nav button{appearance:none;background:none;border:0;min-height:64px;padding:8px clamp(16px,3vw,32px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;cursor:pointer;text-align:left;min-width:0}
+.panel-nav button + button{border-left:1px solid var(--line);align-items:flex-end;text-align:right}
+.panel-nav button:hover{background:var(--ivory)}
+.panel-nav .dir{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--earth)}
+.panel-nav .nm{font-size:.9375rem;color:var(--ink);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+html.locked{overflow:hidden}
+@media (max-width:820px){
+  /* On phones the whole window scrolls: photo first, then the text, with navigation pinned to the bottom */
+  dialog.viewer{width:100vw;height:100dvh;max-height:100dvh;margin:0;inset:0;overflow-y:auto;overscroll-behavior:contain}
+  .viewer-inner{display:block;height:auto;min-height:100%}
+  .stage{height:auto;padding-top:env(safe-area-inset-top,0px)}
+  .stage-media img{height:auto;aspect-ratio:4/5;max-height:62dvh;object-fit:cover}
+  .panel{min-height:0}
+  .panel-top{position:fixed;top:calc(env(safe-area-inset-top,0px) + 14px);right:max(14px,env(safe-area-inset-right,0px));padding:0;z-index:3}
+  .panel-top .count{display:none}
+  .panel-top .icon-btn{background:var(--paper);border-color:var(--line)}
+  .panel-body{overflow:visible;padding-top:24px;padding-bottom:32px}
+  .panel-nav{position:sticky;bottom:0;background:var(--paper);z-index:2;padding-bottom:env(safe-area-inset-bottom,0px)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="houmi-logo" viewBox="520 422 890 252"><g fill="currentColor"><path d="M654.88,450.19h12.47v214.77h31.69V447h-39.08h-8.28c0,17.86-0.42,39.13-2.72,56.73c-1.47,11.42-4.77,19.59-9.74,24.51 c-5.03,4.92-13.25,7.39-24.67,7.39c-11,0-19.38,3.51-25.2,10.58c-9.48,11.52-14.51,41.28-15.03,56.78l-0.05,58.77h-15.71L558.6,447 h-31.69v217.96h39.08h11.37c0-18.28-1.47-66.16,12.52-79.83c4.98-4.92,13.2-7.39,24.67-7.39c10.95,0,19.33-3.51,25.14-10.63 c5.87-7.07,9.9-18.6,12.21-34.57c1.1-8.01,2.57-16.03,2.72-23.99L654.88,450.19z"/> <rect x="1363.14" y="505.04" width="31.69" height="159.92"/> <path d="M1231.71,568.58h-2.62v-7.44c0-14.51-2.2-31.01-10.84-43.16c-7.12-10.06-16.92-14.04-29.02-14.04 c-11.84,0-20.9,4.45-28.02,11.58c-20.8,18.12-37.35,51.65-49.66,100.57V505.04h-31.64v159.92h38.82c0-0.73,0-1.41,0-2.1h-7.18 v-38.45c11.47-38.87,22.26-65.43,32.53-79.83c7.44-9.32,17.34-15.66,30.75-15.66c20.06,0,28.13,14.2,28.13,32.58 c0,8.96-2.51,19.7-4.61,28.39c-2.93,11.94-5.34,25.04-5.34,37.4c0,12.89,2.15,25.46,6.29,37.66h30.85c-3.61-12-5.5-24.31-5.5-36.93 c0-16.24,2.15-32.22,6.29-47.77c20.8-66.05,74.44-66.73,74.44-18.75c0,9.32-2.57,20.69-4.66,29.75 c-2.67,11.63-5.34,25.14-5.34,37.14c0,12.52,2.25,24.78,6.29,36.56h30.85c-3.56-11.73-5.45-23.83-5.45-36.2 c0-12.89,2.3-27.03,4.5-39.71c1.99-11.1,3.98-23.62,3.98-34.94c0-13.04-2.41-26.61-10.37-37.3c-6.86-9.27-16.24-12.89-27.66-12.89 C1265.49,503.94,1241.14,541.65,1231.71,568.58L1231.71,568.58z"/> <path d="M1020.4,526.15c-0.58,33.21-20.06,114.87-63.23,114.87c-8.9,0-16.97-2.83-23.15-9.32 c-6.5-6.86-8.7-15.92-8.7-25.09c0-8.54,2.3-18.91,4.24-27.24c2.83-11.84,5.71-25.61,5.71-37.82c0-12.47-2.3-24.72-6.29-36.51 h-30.91c3.51,11.58,5.55,23.57,5.55,35.78c0,13.31-2.25,27.76-4.56,40.86c-1.15,6.5-2.2,13.04-2.99,19.64c-0.52,4.4-1,8.96-1,13.41 c0,13.62,2.78,27.66,12,38.13c8.8,9.9,20.9,13.2,33.79,13.2c47.3,0,74.64-76.27,79.52-114.19v113.09h31.69V505.04h-38.82 c0,0.79-0.05,1.62-0.05,2.46h7.18V526.15z"/> <path d="M784.1,640.55c-16.19-12.68-29.86-27.92-40.86-45.31c-15.14-23.78-21.32-43.84,0.84-67.1 c22.58-23.68,44.68-16.45,67.05,1.52c15.87,12.78,29.12,28.08,39.6,45.57c12.31,20.64,17.65,44.32-0.31,64.53 C828.94,663.91,806.26,657.94,784.1,640.55L784.1,640.55z M866.92,622.11c4.71-11.73,6.55-24.57,6.55-37.66 c0-22.16-5.29-43.48-21.01-59.72c-15.03-15.51-34.15-21.53-55.47-21.53c-12.21,0-23.68,1.94-34.15,6.5 c-16.13,8.07-28.39,20.8-36.82,38.24c-4.45,11.21-6.18,23.52-6.18,36.14c0,22.37,5.5,43.63,21.37,60.03 c15.14,15.61,34.26,21.95,55.79,21.95c11.52,0,22.37-1.78,32.32-5.87C848.48,648.93,861,636.26,866.92,622.11L866.92,622.11z"/> <path d="M1379.11,483.93c-13.93,0-21.58-16.45-15.66-28.08c4.09-8.17,13.46-15.82,16.03-26.82 c6.29,6.18,9.53,13.31,13.62,19.07C1402.37,461.25,1398.49,483.93,1379.11,483.93L1379.11,483.93z"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+</svg>
+
+<a class="skip" href="#catalogue" data-i18n="skip">Перейти до каталогу</a>
+
+<div class="draft" id="draft" hidden><div class="wrap" id="draft-text"></div></div>
+
+<header class="site-head" id="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Houmi">
+      <svg viewBox="0 0 890 252" aria-hidden="true"><use href="#houmi-logo"/></svg>
+    </a>
+    <nav class="nav" aria-label="Main" data-i18n-aria="navLabel">
+      <a href="#about" data-i18n="navAbout">Про колекцію</a>
+      <a href="#catalogue" data-i18n="navCatalogue">Каталог</a>
+      <a href="#contacts" data-i18n="navContacts">Контакти</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Мова" data-i18n-aria="langLabel">
+      <button type="button" data-lang="uk" lang="uk" aria-label="Українська">UA</button>
+      <button type="button" data-lang="pl" lang="pl" aria-label="Polski">PL</button>
+      <button type="button" data-lang="en" lang="en" aria-label="English">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" id="about" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1 id="hero-title"><span class="sub" data-i18n="heroEyebrow">Houmi · свічки ручної роботи</span><span data-i18n="heroTitle">Колекція «Берегиня»</span></h1>
+        <p class="lead" data-i18n="intro1"></p>
+        <p class="lead" data-i18n="intro2"></p>
+        <div class="cta-row">
+          <a class="btn" href="#catalogue"><span data-i18n="ctaCatalogue">Переглянути каталог</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn ghost" href="https://houmidecorstore.etsy.com" target="_blank" rel="noopener"><span data-i18n="ctaEtsy">Магазин на Etsy</span><svg aria-hidden="true"><use href="#i-out"/></svg></a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img src="assets/brand/berehynia-illustration.png" width="611" height="583" alt="" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="catalogue" id="catalogue" aria-labelledby="cat-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="cat-title" data-i18n="catTitle">Шість берегинь</h2>
+        <p data-i18n="catHint">Відкрийте будь-яку свічку, щоб прочитати її історію та побажання.</p>
+      </div>
+      <ul class="grid" id="grid"></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="contacts">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top" aria-label="Houmi"><svg viewBox="0 0 890 252" aria-hidden="true"><use href="#houmi-logo"/></svg></a>
+      <p class="statement" data-i18n="statement">Створено жіночими руками для тих, хто обирає усвідомлене життя.</p>
+    </div>
+    <nav class="links" aria-label="Houmi online" data-i18n-aria="linksLabel">
+      <a href="https://www.instagram.com/houmi.decor/" target="_blank" rel="noopener"><span>Instagram</span><span>@houmi.decor</span></a>
+      <a href="https://houmidecorstore.etsy.com" target="_blank" rel="noopener"><span>Etsy</span><span>houmidecorstore</span></a>
+    </nav>
+    <div class="legal"><span>© 2026 Houmi</span><span data-i18n="handmade">Ручна робота</span></div>
+  </div>
+</footer>
+
+<dialog class="viewer" id="viewer" aria-labelledby="v-name">
+  <div class="viewer-inner">
+    <div class="stage">
+      <div class="stage-media" id="stage-media"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-top">
+        <span class="count" id="v-count" aria-live="polite"></span>
+        <button type="button" class="icon-btn" id="v-close" aria-label="Закрити"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+      <div class="panel-body" id="v-body">
+        <span class="label" data-i18n="collectionLabel">Колекція «Берегиня»</span>
+        <h2 id="v-name"></h2>
+        <p class="symbols" id="v-symbols"></p>
+        <div class="full" id="v-full"></div>
+        <figure class="wish">
+          <figcaption id="v-wish-label"></figcaption>
+          <blockquote id="v-wish"></blockquote>
+        </figure>
+        <div class="panel-actions">
+          <a class="btn" href="https://houmidecorstore.etsy.com" target="_blank" rel="noopener"><span data-i18n="orderEtsy">Замовити на Etsy</span><svg aria-hidden="true"><use href="#i-out"/></svg></a>
+          <a class="btn ghost" href="https://www.instagram.com/houmi.decor/" target="_blank" rel="noopener"><span data-i18n="writeIg">Написати в Instagram</span><svg aria-hidden="true"><use href="#i-out"/></svg></a>
+        </div>
+      </div>
+      <div class="panel-nav">
+        <button type="button" id="v-prev"><span class="dir"><span data-i18n="prev">Попередня</span></span><span class="nm" id="v-prev-name"></span></button>
+        <button type="button" id="v-next"><span class="dir"><span data-i18n="next">Наступна</span></span><span class="nm" id="v-next-name"></span></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+/* =====================================================================
+   HOUMI · БЕРЕГИНЯ — ДАНІ КАТАЛОГУ
+   Тут єдине місце, де редагуються свічки й тексти.
+   Усі тексти перенесено дослівно з другої сторінки оригінальних карток (PDF).
+   • Мови: uk — українська, pl — польська, en — англійська.
+   • symbols   — рядок символів із картки; показується в каталозі під назвою.
+   • text      — повний опис; кожен рядок у [ ] — окремий абзац.
+   • wishLabel / wish — «Її побажання» та сам текст побажання.
+   ===================================================================== */
+const PRODUCTS = [
+  {
+    id: "home",
+    photo: "assets/products/home.jpg", thumb: "assets/products/home-640.jpg", w: 1200, h: 1500,
+    name:      { uk: "Берегиня Дому", pl: "Strażniczka Domu", en: "Berehynia of the Home" },
+    symbols:   {
+      uk: "СИМВОЛ ЗАТИШКУ • ТЕПЛА • ЗАХИСТУ",
+      pl: "SYMBOL PRZYTULNOŚCI • CIEPŁA • OCHRONY",
+      en: "A SYMBOL OF COMFORT • WARMTH • PROTECTION"
+    },
+    text:      {
+      uk: ["Вона тримає свій маленький дім обома руками — наче береже найцінніше.", "Бо дім — це не лише стіни. Це світло у вікні, коли повертаєшся ввечері. Знайомі голоси з іншої кімнати, запах сніданку, сміх і обійми — сотні дрібниць, з яких народжується відчуття: ти вдома.", "Берегиня дому — символ затишку, спокою й тепла. Вона нагадує про найважливіше: дім — це місце, де на тебе чекають."],
+      pl: ["Trzyma swój mały dom w obu dłoniach — jakby chroniła to, co najcenniejsze.", "Bo dom to nie tylko ściany. To światło w oknie, gdy wracasz wieczorem. Znajome głosy z drugiego pokoju, zapach śniadania, śmiech i uściski — setki drobiazgów, z których rodzi się to uczucie: jesteś w domu.", "Strażniczka domu to symbol przytulności, spokoju i ciepła. Przypomina o tym, co najważniejsze: dom to miejsce, w którym ktoś na ciebie czeka."],
+      en: ["She holds her little house in both hands, as if keeping safe what matters most.", "Because a home is more than walls. It’s the light in the window when you come back in the evening. Familiar voices from the next room, the smell of breakfast, laughter and hugs — hundreds of small things that add up to one feeling: you’re home.", "Berehynia of the Home is a symbol of comfort, calm and warmth. She reminds us of what matters most: home is the place where someone is waiting for you."]
+    },
+    wishLabel: { uk: "Її побажання:", pl: "Jej życzenie:", en: "Her wish:" },
+    wish:      {
+      uk: "Нехай у цьому домі завжди буде тепло. І завжди буде до кого повертатися.",
+      pl: "Niech w tym domu zawsze będzie ciepło. I niech zawsze będzie do kogo wracać.",
+      en: "May this home always be warm. And may there always be someone to come home to."
+    },
+    alt: {
+      uk: "Коричнева свічка-берегиня з будиночком у руках, деревом і ключем на сукні та віночком із золотих квітів",
+      pl: "Brązowa świeca Strażniczka z domkiem w dłoniach, drzewem i kluczem na sukni oraz wiankiem ze złotych kwiatów",
+      en: "Brown Berehynia candle holding a small house, with a tree and a key on her dress and a wreath of gold flowers"
+    }
+  },
+  {
+    id: "christmas",
+    photo: "assets/products/christmas.jpg", thumb: "assets/products/christmas-640.jpg", w: 1200, h: 1500,
+    name:      { uk: "Різдвяна Берегиня", pl: "Świąteczna Strażniczka", en: "Christmas Berehynia" },
+    symbols:   {
+      uk: "СИМВОЛ РОДИННОГО ТЕПЛА • СВІТЛА • ДИВА",
+      pl: "SYMBOL RODZINNEGO CIEPŁA • ŚWIATŁA • CUDU",
+      en: "A SYMBOL OF FAMILY WARMTH • LIGHT • WONDER"
+    },
+    text:      {
+      uk: ["Є вечори, коли дім ніби стає теплішим.", "На кухні готують щось особливе, мерехтять вогники, дістаються знайомі з дитинства прикраси. Хтось накриває на стіл, хтось уже дорогою додому. І раптом найціннішим стає зовсім просте — бути разом.", "Так народилася Різдвяна Берегиня — символ родинного тепла, світла, традицій і тихого різдвяного дива.", "Її хочеться діставати щороку разом з улюбленими прикрасами. І, можливо, одного дня вона сама стане частиною сімейної традиції."],
+      pl: ["Są takie wieczory, kiedy dom robi się jakby cieplejszy.", "W kuchni gotuje się coś wyjątkowego, migoczą światełka, z pudełek wyjmujemy ozdoby znane od dzieciństwa. Ktoś nakrywa do stołu, ktoś jest już w drodze do domu. I nagle najcenniejsze staje się to, co najprostsze — być razem.", "Tak narodziła się Świąteczna Strażniczka — symbol rodzinnego ciepła, światła, tradycji i cichego świątecznego cudu.", "Chce się ją wyjmować co roku razem z ulubionymi ozdobami. A może pewnego dnia sama stanie się częścią rodzinnej tradycji."],
+      en: ["There are evenings when home seems to grow warmer.", "Something special is cooking in the kitchen, lights are twinkling, and decorations you’ve known since childhood come out of their boxes.", "Someone is setting the table, someone else is already on their way home. And suddenly, the most precious thing is the simplest one — being together.", "That is how the Christmas Berehynia came to be — a symbol of family warmth, light, tradition and the quiet magic of Christmas.", "You’ll want to bring her out every year, along with your favourite decorations. And perhaps one day, she will become part of your family tradition."]
+    },
+    wishLabel: { uk: "Її побажання:", pl: "Jej życzenie:", en: "Her wish:" },
+    wish:      {
+      uk: "Нехай у цьому домі завжди буде світло. А за святковим столом — ті, кого любите.",
+      pl: "Niech w tym domu zawsze będzie jasno. A przy świątecznym stole — ci, których kochacie.",
+      en: "May this home always be full of light. And may the ones you love always gather around the festive table."
+    },
+    alt: {
+      uk: "Червоно-коричнева свічка-берегиня з фігуркою кози й дзвіночками в руках та золотою зіркою на сукні",
+      pl: "Czerwonobrązowa świeca Strażniczka z figurką kozy i dzwoneczkami w dłoniach oraz złotą gwiazdą na sukni",
+      en: "Reddish-brown Berehynia candle holding a goat figure and bells, with a gold star on her dress"
+    }
+  },
+  {
+    id: "abundance",
+    photo: "assets/products/abundance.jpg", thumb: "assets/products/abundance-640.jpg", w: 1200, h: 1500,
+    name:      { uk: "Берегиня Достатку", pl: "Strażniczka Dostatku", en: "Berehynia of Abundance" },
+    symbols:   {
+      uk: "СИМВОЛ ЩЕДРОСТІ • ДОБРОБУТУ",
+      pl: "SYMBOL HOJNOŚCI • DOBROBYTU",
+      en: "A SYMBOL OF GENEROSITY • WELL-BEING"
+    },
+    text:      {
+      uk: ["Кажуть, справжній достаток живе там, де дім наповнений не лише речами, а й теплом. Де є чим пригостити гостя, чим поділитися з близькими і за що подякувати наприкінці дня.", "Саме такою створено Берегиню достатку — з повними руками дарів, як символ щедрості, добробуту й життя в наповненості.", "Вона нагадує про радість мати вдосталь і можливість ділитися з іншими. Про щедру землю, повний стіл, добрі зустрічі та маленькі радощі, з яких складається щасливе життя.", "Нехай вона оселиться у домі як маленьке побажання, щоб у ньому завжди було вдосталь: хліба на столі, тепла в серцях, радості в буднях і приводів сказати: «У нас усе добре»."],
+      pl: ["Mówi się, że prawdziwy dostatek mieszka tam, gdzie dom wypełniają nie tylko rzeczy, ale i ciepło. Gdzie jest czym poczęstować gościa, czym podzielić się z bliskimi i za co podziękować pod koniec dnia.", "Właśnie taka jest Strażniczka dostatku — z rękami pełnymi darów, jako symbol hojności, dobrobytu i życia w pełni.", "Przypomina o radości posiadania w bród i możliwości dzielenia się z innymi. O hojnej ziemi, pełnym stole, dobrych spotkaniach i małych radościach, z których składa się szczęśliwe życie.", "Niech zamieszka w waszym domu jako małe życzenie, by nigdy niczego w nim nie brakowało: chleba na stole, ciepła w sercach, radości na co dzień i powodów, by powiedzieć: „U nas wszystko dobrze”."],
+      en: ["They say true abundance lives where a home is filled not only with things, but with warmth. Where there is something to offer a guest, something to share with loved ones and something to be grateful for at the end of the day.", "That is how Berehynia of Abundance was made — with her arms full of gifts, as a symbol of generosity, well-being and a full life.", "She is a reminder of the joy of having enough and being able to share with others. Of generous earth, a full table, good company and the small joys that make up a happy life.", "Let her settle in your home as a small wish that it will always have plenty: bread on the table, warmth in hearts, joy in everyday life and reasons to say: “All is well here.”"]
+    },
+    wishLabel: { uk: "Її побажання:", pl: "Jej życzenie:", en: "Her wish:" },
+    wish:      {
+      uk: "Нехай у цьому домі завжди буде вдосталь усього доброго — і ще трохи, щоб поділитися з іншими.",
+      pl: "Niech w tym domu zawsze będzie pod dostatkiem wszystkiego, co dobre — i jeszcze trochę, by podzielić się z innymi.",
+      en: "May this home always have plenty of everything good — and a little extra to share with others."
+    },
+    alt: {
+      uk: "Медово-коричнева свічка-берегиня з глечиком, повним фруктів, у квітковому віночку та намисті",
+      pl: "Miodowobrązowa świeca Strażniczka z dzbanem pełnym owoców, w kwiatowym wianku i korach",
+      en: "Honey-brown Berehynia candle holding a jug full of fruit, wearing a flower wreath and beads"
+    }
+  },
+  {
+    id: "love",
+    photo: "assets/products/love.jpg", thumb: "assets/products/love-640.jpg", w: 1200, h: 1500,
+    name:      { uk: "Берегиня Любові", pl: "Strażniczka Miłości", en: "Berehynia of Love" },
+    symbols:   {
+      uk: "СИМВОЛ НІЖНОСТІ • ЛЮБОВІ • ТУРБОТИ",
+      pl: "SYMBOL CZUŁOŚCI • MIŁOŚCI • TROSKI",
+      en: "A SYMBOL OF TENDERNESS • LOVE • CARE"
+    },
+    text:      {
+      uk: ["Її неможливо не помітити — вона буквально розквітає маками.", "І такою ж буває любов. Вона додає кольору звичайним дням, спонукає нас піклуватися, чекати, обіймати міцніше й помічати те, повз що інші пройдуть.", "Берегиня любові — символ ніжності та любові в усіх її проявах. До коханої людини. До родини. До життя. І до себе.", "Її можна подарувати тому, кому хочеться без зайвих слів сказати: «Ти для мене важлива/-ий».", "А можна залишити собі — як нагадування, що любов починається там, де їй дозволяють квітнути."],
+      pl: ["Nie sposób jej nie zauważyć — dosłownie rozkwita makami.", "Taka bywa też miłość. Dodaje koloru zwykłym dniom, sprawia, że troszczymy się, czekamy, przytulamy mocniej i dostrzegamy to, obok czego inni przechodzą obojętnie.", "Strażniczka miłości to symbol czułości i miłości we wszystkich jej odsłonach. Do ukochanej osoby. Do rodziny. Do życia. I do siebie.", "Możesz podarować ją komuś, komu bez zbędnych słów chcesz powiedzieć: „Jesteś dla mnie ważna/ważny”.", "Albo zatrzymać dla siebie — jako przypomnienie, że miłość zaczyna się tam, gdzie pozwala się jej kwitnąć."],
+      en: ["She is impossible to miss — she is quite literally blooming with poppies.", "Love can be like that too. It adds colour to ordinary days and moves us to care, to be patient, to hold each other a little tighter and to notice what others might pass by.", "Berehynia of Love is a symbol of tenderness and love in all its forms. For the one you love. For your family. For life. And for yourself.", "Give her to someone you want to tell, without any extra words: “You matter to me.”", "Or keep her for yourself — as a reminder that love begins wherever it is allowed to bloom."]
+    },
+    wishLabel: { uk: "Її побажання:", pl: "Jej życzenie:", en: "Her wish:" },
+    wish:      {
+      uk: "Нехай любов у вашому житті завжди знаходить місце, щоб розквітати.",
+      pl: "Niech miłość w waszym życiu zawsze znajduje miejsce, by rozkwitać.",
+      en: "May love in your life always find a place to bloom."
+    },
+    alt: {
+      uk: "Теракотова свічка-берегиня з букетом квітів у руках, вишитими рукавами та квітковим віночком",
+      pl: "Terakotowa świeca Strażniczka z bukietem kwiatów w dłoniach, haftowanymi rękawami i kwiatowym wiankiem",
+      en: "Terracotta Berehynia candle holding a bouquet of flowers, with embroidered sleeves and a flower wreath"
+    }
+  },
+  {
+    id: "family",
+    photo: "assets/products/family.jpg", thumb: "assets/products/family-640.jpg", w: 1200, h: 1500,
+    name:      { uk: "Берегиня Роду", pl: "Strażniczka Rodu", en: "Berehynia of the Family" },
+    symbols:   {
+      uk: "СИМВОЛ РОДИНИ • ПАМ’ЯТІ • ПОКОЛІНЬ",
+      pl: "SYMBOL RODZINY • PAMIĘCI • POKOLEŃ",
+      en: "A SYMBOL OF FAMILY • MEMORY • GENERATIONS"
+    },
+    text:      {
+      uk: ["У кожного роду є своя історія. Вона починається задовго до нас і продовжується в тих, хто прийде після.", "Берегиня роду зображена як мати. Це символ поколінь, які пов’язані між собою невидимою ниткою любові, турботи й пам’яті.", "Вона уособлює материнську опіку, продовження роду та зв’язок між поколіннями. Нагадує про тих, хто дав нам життя, про тепло, яке ми отримали в дитинстві, і про все добре, що можемо передати далі.", "Її хочеться подарувати мамі, бабусі, доньці — або залишити у власному домі як символ родинної єдності та любові, що живе крізь покоління."],
+      pl: ["Każdy ród ma swoją historię. Zaczyna się na długo przed nami i trwa w tych, którzy przyjdą po nas.", "Strażniczka rodu przedstawiona jest jako matka. To symbol pokoleń połączonych niewidzialną nicią miłości, troski i pamięci.", "Uosabia matczyną opiekę, ciągłość rodu i więź między pokoleniami. Przypomina o tych, którzy dali nam życie, o cieple, które otrzymaliśmy w dzieciństwie, i o wszystkim, co dobre, co możemy przekazać dalej.", "Warto podarować ją mamie, babci, córce — albo zatrzymać we własnym domu jako symbol rodzinnej jedności i miłości, która trwa przez pokolenia."],
+      en: ["Every family has its own story. It begins long before us and continues in those who come after.", "Berehynia of the Family is depicted as a mother. She is a symbol of generations bound together by an invisible thread of love, care and memory.", "She embodies a mother’s care, the continuity of family and the bond between generations. She reminds us of those who gave us life, the warmth we received as children, and all the good things we can pass on.", "Give her to your mother, grandmother or daughter — or keep her in your own home as a symbol of family unity and a love that lives on through generations."]
+    },
+    wishLabel: { uk: "Її побажання:", pl: "Jej życzenie:", en: "Her wish:" },
+    wish:      {
+      uk: "Нехай рід міцніє, діти ростуть у любові, а турбота передається з покоління в покоління.",
+      pl: "Niech ród rośnie w siłę, dzieci dorastają w miłości, a troska przechodzi z pokolenia na pokolenie.",
+      en: "May your family grow stronger, your children grow up surrounded by love, and care be passed down from one generation to the next."
+    },
+    alt: {
+      uk: "Золотисто-медова свічка-берегиня з довгими косами, яка обіймає двох дітей",
+      pl: "Złocistomiodowa świeca Strażniczka z długimi warkoczami, obejmująca dwoje dzieci",
+      en: "Golden honey-coloured Berehynia candle with long braids, embracing two children"
+    }
+  },
+  {
+    id: "wealth",
+    photo: "assets/products/wealth.jpg", thumb: "assets/products/wealth-640.jpg", w: 1200, h: 1500,
+    name:      { uk: "Грошова Берегиня", pl: "Strażniczka Finansów", en: "Berehynia of Wealth" },
+    symbols:   {
+      uk: "СИМВОЛ ДОСТАТКУ • ПРАЦІ • МОЖЛИВОСТЕЙ",
+      pl: "SYMBOL DOSTATKU • PRACY • MOŻLIWOŚCI",
+      en: "A SYMBOL OF PROSPERITY • WORK • OPPORTUNITY"
+    },
+    text:      {
+      uk: ["Колись достаток вимірювали повними коморами й добрим урожаєм. Сьогодні він має інші виміри — але бажання мати фінансову опору, бути впевненими у завтрашньому дні й мати свободу обирати залишилося незмінним.", "Грошова Берегиня — символ фінансової стабільності, цінності власної праці та можливостей, які ми створюємо власними руками.", "Вона не обіцяє чарівним чином наповнити гаманець. Натомість може стати красивим символом наміру: зростати, сміливіше мріяти, цінувати свою працю й дозволяти собі більше.", "Поставте її вдома або там, де народжуються ваші ідеї та плани. Нехай нагадує, що фінансова впевненість починається з віри у власні сили та рішень, які ми приймаємо щодня."],
+      pl: ["Kiedyś dostatek mierzono pełnymi spiżarniami i dobrym plonem. Dziś ma inne wymiary — ale pragnienie finansowego oparcia, pewności jutra i swobody wyboru pozostało niezmienne.", "Strażniczka finansów to symbol stabilności finansowej, wartości własnej pracy i możliwości, które tworzymy własnymi rękami.", "Nie obiecuje, że w magiczny sposób napełni portfel. Może za to stać się pięknym symbolem intencji: by się rozwijać, odważniej marzyć, doceniać swoją pracę i pozwalać sobie na więcej.", "Postawcie ją w domu albo tam, gdzie rodzą się wasze pomysły i plany. Niech przypomina, że finansowa pewność zaczyna się od wiary we własne siły i decyzji, które podejmujemy każdego dnia."],
+      en: ["Prosperity was once measured by full storerooms and a good harvest. Today, it looks different — but the wish for financial security, confidence in tomorrow and the freedom to choose has stayed the same.", "Berehynia of Wealth is a symbol of financial stability, the value of your own work and the opportunities we create with our own hands.", "She doesn’t promise to fill your wallet by magic. Instead, she serves as a beautiful symbol of intention: to grow, to dream more boldly, to value your work and to allow yourself more.", "Place her at home or wherever your ideas and plans are born. Let her remind you that financial confidence begins with believing in yourself and the choices you make every day."]
+    },
+    wishLabel: { uk: "Її побажання:", pl: "Jej życzenie:", en: "Her wish:" },
+    wish:      {
+      uk: "Нехай ваша праця гідно винагороджується, можливості примножуються, а фінансова впевненість стає вашою опорою.",
+      pl: "Niech wasza praca będzie godnie nagradzana, możliwości się pomnażają, a pewność finansowa stanie się waszym oparciem.",
+      en: "May your work be fairly rewarded, your opportunities multiply, and financial confidence become your foundation."
+    },
+    alt: {
+      uk: "Темно-оливкова свічка-берегиня із золотим декором і довгими косами, яка тримає мішечок із монетами",
+      pl: "Ciemnooliwkowa świeca Strażniczka ze złotymi zdobieniami i długimi warkoczami, trzymająca sakiewkę z monetami",
+      en: "Dark olive Berehynia candle with gold detailing and long braids, holding a pouch of coins"
+    }
+  }
+];
+
+/* Польські назви взято з польських карток. */
+const PL_NAMES_APPROVED = true;
+/* Вступ до колекції погоджено засновницями. */
+const INTRO_APPROVED = true;
+
+/* Тексти інтерфейсу */
+const UI = {
+  uk: {
+    docTitle: "Берегиня — Houmi",
+    skip: "Перейти до каталогу",
+    navLabel: "Основна навігація", navAbout: "Про колекцію", navCatalogue: "Каталог", navContacts: "Контакти",
+    langLabel: "Мова",
+    heroEyebrow: "Houmi · свічки ручної роботи",
+    heroTitle: "Колекція «Берегиня»",
+    intro1: "Берегиня в українській традиції — символ захисту дому та роду. У цій колекції — шість свічок, кожна з яких має своє значення: дім, Різдво, достаток, любов, рід і грошовий добробут.",
+    intro2: "Кожну Берегиню створено вручну з увагою до деталей і сенсів. Її можна залишити у власному домі або подарувати близькій людині як тепле побажання.",
+    ctaCatalogue: "Переглянути каталог", ctaEtsy: "Магазин на Etsy",
+    catTitle: "Шість берегинь",
+    catHint: "Відкрийте будь-яку свічку, щоб прочитати її історію та побажання.",
+    viewCard: "Детальніше",
+    viewCardFor: n => `Детальніше: ${n}`,
+    pending: "Опис з'явиться незабаром.",
+    collectionLabel: "Колекція «Берегиня»",
+    orderEtsy: "Замовити на Etsy", writeIg: "Написати в Instagram",
+    prev: "Попередня", next: "Наступна", close: "Закрити",
+    count: (i, n) => `${i} з ${n}`,
+    dialogPos: (i, n) => `Свічка ${i} з ${n}`,
+    statement: "Створено жіночими руками для тих, хто обирає усвідомлене життя.",
+    linksLabel: "Houmi онлайн", handmade: "Ручна робота"
+  },
+  pl: {
+    docTitle: "Berehynia — Houmi",
+    skip: "Przejdź do katalogu",
+    navLabel: "Nawigacja główna", navAbout: "O kolekcji", navCatalogue: "Katalog", navContacts: "Kontakt",
+    langLabel: "Język",
+    heroEyebrow: "Houmi · świece robione ręcznie",
+    heroTitle: "Kolekcja „Berehynia”",
+    intro1: "W ukraińskiej tradycji Berehynia jest symbolem ochrony domu i rodu. Kolekcja obejmuje sześć świec, z których każda ma własne znaczenie: dom, Boże Narodzenie, dostatek, miłość, ród i pomyślność finansowa.",
+    intro2: "Każda Berehynia powstaje ręcznie, z dbałością o detale i znaczenie. Można zatrzymać ją w swoim domu lub podarować bliskiej osobie jako ciepłe życzenie.",
+    ctaCatalogue: "Zobacz katalog", ctaEtsy: "Sklep na Etsy",
+    catTitle: "Sześć Strażniczek",
+    catHint: "Otwórz dowolną świecę, aby przeczytać jej historię i życzenie.",
+    viewCard: "Więcej",
+    viewCardFor: n => `Więcej: ${n}`,
+    pending: "Opis pojawi się wkrótce.",
+    collectionLabel: "Kolekcja „Berehynia”",
+    orderEtsy: "Zamów na Etsy", writeIg: "Napisz na Instagramie",
+    prev: "Poprzednia", next: "Następna", close: "Zamknij",
+    count: (i, n) => `${i} z ${n}`,
+    dialogPos: (i, n) => `Świeca ${i} z ${n}`,
+    statement: "Tworzone kobiecymi rękami dla tych, którzy wybierają uważne życie.",
+    linksLabel: "Houmi online", handmade: "Rękodzieło"
+  },
+  en: {
+    docTitle: "Berehynia — Houmi",
+    skip: "Skip to the catalogue",
+    navLabel: "Main navigation", navAbout: "About", navCatalogue: "Catalogue", navContacts: "Contact",
+    langLabel: "Language",
+    heroEyebrow: "Houmi · handmade candles",
+    heroTitle: "Berehynia Collection",
+    intro1: "In Ukrainian tradition, Berehynia is a symbol of protection for the home and family lineage. The collection features six candles, each with its own meaning: home, Christmas, abundance, love, family lineage and financial well-being.",
+    intro2: "Each Berehynia is handcrafted with attention to detail and meaning. It can be kept in your own home or given to someone close as a gift carrying a heartfelt wish.",
+    ctaCatalogue: "View the catalogue", ctaEtsy: "Etsy shop",
+    catTitle: "Six Berehynias",
+    catHint: "Open any candle to read her story and her wish.",
+    viewCard: "Read more",
+    viewCardFor: n => `Read more: ${n}`,
+    pending: "Description coming soon.",
+    collectionLabel: "Berehynia Collection",
+    orderEtsy: "Order on Etsy", writeIg: "Message us on Instagram",
+    prev: "Previous", next: "Next", close: "Close",
+    count: (i, n) => `${i} of ${n}`,
+    dialogPos: (i, n) => `Candle ${i} of ${n}`,
+    statement: "Handcrafted by women for those who choose mindful living.",
+    linksLabel: "Houmi online", handmade: "Handmade"
+  }
+};
+
+/* ===================== Нижче — код сайту, редагувати не потрібно ===================== */
+(function () {
+  const LANGS = ["uk", "pl", "en"];
+  const $ = (s, r = document) => r.querySelector(s);
+  const grid = $("#grid"), dialog = $("#viewer");
+  let lang = "uk", current = -1, lastFocus = null;
+
+  try { const saved = localStorage.getItem("houmi-lang"); if (LANGS.includes(saved)) lang = saved; } catch (e) {}
+  const urlLang = new URLSearchParams(location.search).get("lang");
+  if (urlLang === "ua") lang = "uk"; else if (LANGS.includes(urlLang)) lang = urlLang;
+
+  const t = k => UI[lang][k];
+  const text = (obj) => (obj && obj[lang]) || null;
+  const icon = id => `<svg aria-hidden="true"><use href="#${id}"/></svg>`;
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  /* Catalogue grid */
+  function renderGrid() {
+    grid.innerHTML = PRODUCTS.map((p, i) => {
+      const nm = esc(p.name[lang]);
+      const sh = text(p.symbols);
+      return `<li class="product" data-index="${i}">
+        <div class="media" data-open="${i}">
+          <img src="${p.thumb}" srcset="${p.thumb} 640w, ${p.photo} ${p.w}w" sizes="(max-width:560px) 92vw, (max-width:960px) 46vw, 360px"
+               width="${p.w}" height="${p.h}" loading="${i < 3 ? "eager" : "lazy"}" decoding="async" alt="${esc(p.alt[lang])}">
+        </div>
+        <div class="body">
+          <h3 id="name-${p.id}">${nm}</h3>
+          <p class="${sh ? "symbols" : "pending"}">${esc(sh || t("pending"))}</p>
+          <button type="button" class="view" data-open="${i}" aria-label="${esc(t("viewCardFor")(p.name[lang]))}"><span>${esc(t("viewCard"))}</span>${icon("i-arrow")}</button>
+        </div>
+      </li>`;
+    }).join("");
+  }
+
+  /* Static interface text */
+  function applyStatic() {
+    document.documentElement.lang = lang;
+    document.title = t("docTitle");
+    document.querySelectorAll("[data-i18n]").forEach(el => { const v = UI[lang][el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
+    document.querySelectorAll("[data-i18n-aria]").forEach(el => el.setAttribute("aria-label", t(el.dataset.i18nAria)));
+    document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    $("#v-close").setAttribute("aria-label", t("close"));
+  }
+
+  function setLang(l) {
+    if (!LANGS.includes(l) || l === lang) return;
+    lang = l;
+    try { localStorage.setItem("houmi-lang", l); } catch (e) {}
+    applyStatic(); renderGrid(); renderDraft();
+    if (dialog.open) renderViewer();
+  }
+
+  /* Product dialog */
+  function renderStage() {
+    const p = PRODUCTS[current];
+    $("#stage-media").innerHTML = `<img src="${p.photo}" width="${p.w}" height="${p.h}" alt="${esc(p.alt[lang])}">`;
+  }
+
+  function renderViewer() {
+    const p = PRODUCTS[current], n = PRODUCTS.length;
+    $("#v-name").textContent = p.name[lang];
+    $("#v-count").textContent = t("count")(current + 1, n);
+    dialog.setAttribute("aria-description", t("dialogPos")(current + 1, n));
+    const full = text(p.text), sym = text(p.symbols), wish = text(p.wish);
+    $("#v-symbols").textContent = sym || "";
+    $("#v-symbols").hidden = !sym;
+    $("#v-full").innerHTML = full && full.length ? full.map(x => `<p>${esc(x)}</p>`).join("") : `<p class="pending">${esc(t("pending"))}</p>`;
+    $("#v-wish-label").textContent = text(p.wishLabel) || "";
+    $("#v-wish").textContent = wish || "";
+    $(".wish").hidden = !wish;
+    const prev = PRODUCTS[(current - 1 + n) % n], next = PRODUCTS[(current + 1) % n];
+    $("#v-prev-name").textContent = prev.name[lang];
+    $("#v-next-name").textContent = next.name[lang];
+    $("#v-prev").setAttribute("aria-label", `${t("prev")}: ${prev.name[lang]}`);
+    $("#v-next").setAttribute("aria-label", `${t("next")}: ${next.name[lang]}`);
+    $("#v-body").scrollTop = 0;
+    dialog.scrollTop = 0;
+    renderStage();
+  }
+
+  function setHash(id) {
+    try { history.replaceState(null, "", id ? "#" + id : location.pathname + location.search); } catch (e) {}
+  }
+
+  function openAt(i) {
+    current = (i + PRODUCTS.length) % PRODUCTS.length;
+    renderViewer();
+    if (!dialog.open) {
+      lastFocus = document.activeElement;
+      document.documentElement.classList.add("locked");
+      dialog.showModal();
+      $("#v-close").focus();
+    }
+    setHash(PRODUCTS[current].id);
+  }
+  function step(d) { openAt(current + d); }
+  function closeViewer() { if (dialog.open) dialog.close(); }
+
+  dialog.addEventListener("close", () => {
+    document.documentElement.classList.remove("locked");
+    setHash(null);
+    const target = grid.querySelector(`[data-index="${current}"] .view`) || lastFocus;
+    if (target && target.focus) target.focus({ preventScroll: false });
+  });
+  dialog.addEventListener("click", e => { if (e.target === dialog) closeViewer(); });
+  dialog.addEventListener("keydown", e => {
+    if (e.key === "ArrowRight") { step(1); e.preventDefault(); }
+    else if (e.key === "ArrowLeft") { step(-1); e.preventDefault(); }
+  });
+  $("#v-close").addEventListener("click", closeViewer);
+  $("#v-prev").addEventListener("click", () => step(-1));
+  $("#v-next").addEventListener("click", () => step(1));
+
+  /* Swipe between candles on touch screens */
+  let sx = null, sy = null;
+  $("#stage-media").addEventListener("touchstart", e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  $("#stage-media").addEventListener("touchend", e => {
+    if (sx === null) return;
+    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
+    sx = sy = null;
+  });
+
+  grid.addEventListener("click", e => { const o = e.target.closest("[data-open]"); if (o) openAt(+o.dataset.open); });
+  document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+
+  /* Deep links: …/#home opens that candle */
+  function fromHash() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const i = PRODUCTS.findIndex(p => p.id === id);
+    if (i >= 0) openAt(i);
+  }
+  window.addEventListener("hashchange", fromHash);
+
+  const head = $("#site-head");
+  const onScroll = () => head.classList.toggle("scrolled", window.scrollY > 8);
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  /* Internal draft notice (Ukrainian, for the founders only) */
+  function renderDraft() {
+    const miss = [];
+    const noText = PRODUCTS.filter(p => ["uk", "pl", "en"].some(l => !(p.text && p.text[l] && p.text[l].length))).length;
+    if (noText) miss.push(`описів бракує для ${noText} з ${PRODUCTS.length} свічок`);
+    if (!PL_NAMES_APPROVED) miss.push("польські назви не затверджені");
+    if (!INTRO_APPROVED) miss.push("вступ до колекції — чернетка");
+    const box = $("#draft");
+    box.hidden = miss.length === 0;
+    box.setAttribute("lang", "uk");
+    $("#draft-text").innerHTML = miss.length ? `<strong>Чернетка, не для публікації.</strong><span>${esc(miss.join(" · "))}.</span>` : "";
+  }
+
+  applyStatic(); renderGrid(); renderDraft(); onScroll(); fromHash();
+})();
+</script>
+</body>
+</html>
